@@ -78,6 +78,11 @@ header {
     font-weight: 600;
 }
 
+#yourTemp {
+    font-size: 60px;
+    font-weight: 600;
+}
+
 /* Footer */
 footer {
     background-color: var(--bright);

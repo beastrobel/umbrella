@@ -1,5 +1,6 @@
 /* Geolocation instructions from W3 Schools, modified for this project */
-var userLocation = document.getElementById("location");
+var userLocation = document.getElementById("yourLocation");
+var todaysDate = dayjs().format('MMMM D, YYYY');
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -19,11 +20,16 @@ function showPosition(position) {
             return response.json();
           })
           .then(function (data) {
-            console.log(data.name)
+            userLocation.innerHTML = data.name;
+            console.log(data);
         });
-        userLocation.innerHTML = (data.name);
+        
     }
-    
-
 document.onload = getLocation();
 
+function displayDate() {
+    var yourDate = document.getElementById("yourDate");
+    
+    yourDate.innerHTML = todaysDate;
+}
+document.onload = displayDate();

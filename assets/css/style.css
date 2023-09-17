@@ -25,8 +25,7 @@ header {
   }
 
 /* Hero image */
-.hero-image {
-    
+.hero-image {  
     background-image:  linear-gradient(rgba(80, 74, 61, 0.3), rgba(95, 88, 72, 0.3)), url("../images/heroimage.jpg");
     height: 800px;
     background-position: top;
@@ -70,7 +69,8 @@ header {
     border: none;
     box-shadow: 2px 2px 5px #e1e1e1; 
     margin-top: 20px;
-    padding: 30px 20px;
+    padding: 30px;
+    display: block;
 }
 
 .card-title {
@@ -79,9 +79,24 @@ header {
 }
 
 #yourTemp {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: 600;
+    display: block;
 }
+
+#weatherIcon {
+    width: 150px;
+    margin-top: -50px;
+    margin-bottom: -20px;
+    
+}
+
+#umbrella {
+    font-family: 'Pacifico', sans-serif;
+    font-size: 24px;
+}
+
+
 
 /* Footer */
 footer {

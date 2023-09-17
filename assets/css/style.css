@@ -3,7 +3,7 @@
     --dark: black;
     --medium: #E1E1E1;
     --light: white;
-    --bright: #32b600;
+    --bright: #FFD700;
     --accent: #FF5D00;
     --radius: 50px;
 }
@@ -13,10 +13,10 @@ header {
     background-color: var(--bright);
 }
 
-.navbar-brand {
-    font-weight: 900;
+.nav-link {
+    font-weight: 600;
     line-height: 21px;
-    font-size: 21px;
+    font-size: 18px;
 }
 
 #nav-icon {
@@ -27,9 +27,9 @@ header {
 /* Hero image */
 .hero-image {
     
-    background-image:  linear-gradient(rgba(80, 74, 61, 0.3), rgba(95, 88, 72, 0.3)), url("heroimage.jpg");
+    background-image:  linear-gradient(rgba(80, 74, 61, 0.3), rgba(95, 88, 72, 0.3)), url("../images/heroimage.jpg");
     height: 800px;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -54,8 +54,8 @@ header {
 
 /* Search bar */
 .btn-primary {
-    background-color: var(--bright);
-    border-color: var(--bright);
+    background-color: var(--dark);
+    border-color: var(--dark);
     border-width: 3px;
 }
 
@@ -69,7 +69,7 @@ header {
 /* Footer */
 footer {
     background-color: var(--bright);
-    color: var(--light);
+    color: var(--dark);
     height: 300px;
     margin-bottom:0;
     text-align: center;

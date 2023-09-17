@@ -1,7 +1,7 @@
 * {
     font-family: 'Poppins', sans-serif;
     --dark: black;
-    --medium: #E1E1E1;
+    --medium: #eeeeee;
     --light: white;
     --bright: #FFD700;
     --accent: #FF5D00;
@@ -59,11 +59,23 @@ header {
     border-width: 3px;
 }
 
-#alerts {
+#local-forecast {
     color: var(--dark);
+    background-color: var(--medium);
     height: 800px;
-    text-align: center;
-    padding-top: 100px;
+}
+
+/* Daily Forecast Card */
+.card {
+    border: none;
+    box-shadow: 2px 2px 5px #e1e1e1; 
+    margin-top: 20px;
+    padding: 30px 20px;
+}
+
+.card-title {
+    font-size: 32px;
+    font-weight: 600;
 }
 
 /* Footer */

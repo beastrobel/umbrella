@@ -1,0 +1,79 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    --dark: black;
+    --medium: #E1E1E1;
+    --light: white;
+    --bright: #32b600;
+    --accent: #FF5D00;
+    --radius: 50px;
+}
+
+/* Nav bar */
+header {
+    background-color: var(--bright);
+}
+
+.navbar-brand {
+    font-weight: 900;
+    line-height: 21px;
+    font-size: 21px;
+}
+
+#nav-icon {
+    height: 45px;
+    display: inline;
+  }
+
+/* Hero image */
+.hero-image {
+    
+    background-image:  linear-gradient(rgba(80, 74, 61, 0.3), rgba(95, 88, 72, 0.3)), url("heroimage.jpg");
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  #hero-header {   
+    font-weight: 600;
+    font-size: 60px;
+  }
+
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+/* Search bar */
+.btn-primary {
+    background-color: var(--bright);
+    border-color: var(--bright);
+    border-width: 3px;
+}
+
+#alerts {
+    color: var(--dark);
+    height: 800px;
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bright);
+    color: var(--light);
+    height: 300px;
+    margin-bottom:0;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Media queries */

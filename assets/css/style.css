@@ -4,8 +4,16 @@
     --medium: #eeeeee;
     --light: white;
     --bright: #FFD700;
-    --accent: #FF5D00;
     --radius: 50px;
+}
+
+body{
+    background-color: var(--medium);
+}
+
+h4 {
+    padding: 30px 0px 20px 20px;
+    font-size: 18px;
 }
 
 /* Nav bar */
@@ -48,7 +56,6 @@ header {
     color: white;
     font-size: 18px;
     font-weight: 600;
-    margin: 0;
   }
 
 /* Search bar */
@@ -58,17 +65,17 @@ header {
     border-width: 3px;
 }
 
-#local-forecast {
-    color: var(--dark);
-    background-color: var(--medium);
-    height: 800px;
+.btn-primary:hover {
+    background-color: var(--bright);
+    border-color: var(--bright);
+    border-width: 3px;
 }
 
 /* Daily Forecast Card */
 .card {
     border: none;
     box-shadow: 2px 2px 5px #e1e1e1; 
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 30px;
     display: block;
 }
@@ -102,7 +109,8 @@ header {
 footer {
     background-color: var(--bright);
     color: var(--dark);
-    height: 300px;
+    height: 200px;
+    font-weight: 500;
     margin-bottom:0;
     text-align: center;
     padding-top: 50px;

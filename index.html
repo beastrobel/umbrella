@@ -44,22 +44,23 @@
     <section>
     <div class="hero-image">
       <div class="hero-text">
-      <h1 id="hero-header">Should I bring an umbrella?</h1>
-      <p>Don't get soaked! Search the weather forecast for your destination and find out.</p>
+      <h1 id="hero-header">Umbrella Weather</h1>
+      <p>Don't get soaked! Search the weather forecast for your destination, and the app will remind you to bring an umbrella.</p>
       <br/>
-      <form class="form-inline">
+      <form >
         <div class="form-group">
-        <input class="form-control form-control-lg" type="text" placeholder="Location">
-        <button type="submit" class="btn btn-primary"><i class="material-icons">search</i></button>
+        <input class="form-control form-control-lg" type="text" placeholder="Location"><br/>
+        <button type="submit" class="btn btn-primary">search</button>
         </div>
     </form>
     </div>
     </section>
-
-    <!--Local forecast section-->
-    <section id="local-forecast">
+    <div class="container">
+    <!--Daily forecast section-->
+    <section id="daily-forecast">
         <div class="row justify-content-center">
-            <div class="col-sm-11 col-lg-11">
+            <div class="col-sm-12 col-lg-12">
+            <h4>DAILY FORECAST</h4>    
                 <div class="card">
                     <div class="row">
                     <div class="card-body col-sm-12 col-lg-6">
@@ -77,8 +78,48 @@
             </div>
         </div>
     </section>
+    <br/>
+    <!--5-Day forecast section-->
+    <section id="5-day-forecast">
+            <h4>5-DAY FORECAST</h4>
+            <div class="row justify-content-between">  
+                <div class="card col-sm-2 col-lg-2">
+                    <p class="card-text text-left" id="day-1"></p>
+                    <img src="" id="day-1-icon"/>
+                    <p class="card-title text-right" id="day-1-temp"></p>
+                    <p class="card-text text-right" id="day-1-weather">No Data Available</p>
+                </div>
+                <div class="card col-sm-2 col-lg-2">
+                    <p class="card-text text-left" id="day-2"></p>
+                    <img src="" id=""/>
+                    <p class="card-title text-right" id="yourTemp"></p>
+                    <p class="card-text text-right" id="yourWeather">No Data Available</p>
+                </div>
+                <div class="card col-sm-2 col-lg-2">
+                    <p class="card-text text-left" id="day-3"></p>
+                    <img src="" id="weatherIcon"/>
+                    <p class="card-title text-right" id="yourTemp"></p>
+                    <p class="card-text text-right" id="yourWeather">No Data Available</p>
+                </div>
+                <div class="card col-sm-2 col-lg-2">
+                    <p class="card-text text-left" id="day-4"></p>
+                    <img src="" id="weatherIcon"/>
+                    <p class="card-title text-right" id="yourTemp"></p>
+                    <p class="card-text text-right" id="yourWeather">No Data Available</p>
+                </div>
+                <div class="card col-sm-2 col-lg-2">
+                    <p class="card-text text-left" id="day-5"></p>
+                    <img src="" id="weatherIcon"/>
+                    <p class="card-title text-right" id="yourTemp"></p>
+                    <p class="card-text text-right" id="yourWeather">No Data Available</p>
+                </div>
+        </div>
+    </section>
+    </div>
+    <br/>
+
     <footer>
-    <p>Footer</p>
+    <p>Made with &#10084;&#65039; by Bea Strobel</p>
     </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>

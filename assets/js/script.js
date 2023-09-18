@@ -1,4 +1,3 @@
-/* Geolocation instructions from W3 Schools, modified for this project */
 var userLocation = document.getElementById("yourLocation");
 var todaysDate = dayjs().format('MMMM D, YYYY');
 var localWeather = document.getElementById("yourWeather");
@@ -6,6 +5,7 @@ var localTemp = document.getElementById("yourTemp");
 var needUmbrella = document.getElementById("umbrella");
 var weatherIcon = document.getElementById("weatherIcon"); 
 
+/* Geolocation instructions from W3 Schools, modified for this project */
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -18,6 +18,8 @@ function showPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     "<br>Longitude: " + lon;
+        
+        /* Fetch daily forecast */
         var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q&lat=' + lat + '&lon=' + lon + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial';
         fetch(requestUrl)
           .then(function (response) {
@@ -33,6 +35,7 @@ function showPosition(position) {
                 weatherIcon.setAttribute('src', iconUrl);
                 }
                 displayTemp();
+                /* App reminds you to bring umbrella on rainy days */
                 function umbrella() {
                     if (data.weather[0].main === 'Rain') {
                         needUmbrella.innerHTML = 'bring an umbrella!';
@@ -52,11 +55,54 @@ function showPosition(position) {
                     
                     }
                 umbrella();
+                /* Displays weather details */
                 function displayWeather() {
-                localWeather.innerHTML = data.weather[0].description + '<br/>wind: ' + data.wind.speed + '<br/>humidity: ' + data.main.humidity;
+                localWeather.innerHTML = data.weather[0].description + '<br/>wind: ' + data.wind.speed + ' mph' + '<br/>humidity: ' + data.main.humidity + '%';
                 }
                 displayWeather();
         });
+
+        
+
+        var dayOneTemp = document.getElementById("day-1-temp");
+        var dayOneIcon = document.getElementById("day-1-icon");
+        var dayOneWeather = document.getElementById("day-1-weather");
+
+        /* Displays dates for 5-Day forecast */
+        function displayDate() {
+            for (let i=0; i<5; i++){
+            let x = dayjs();
+            let weekDay = x.add(i+1, 'day').format('dddd');
+            var weekDayLabel = document.getElementById("day-"+(i+1));
+            weekDayLabel.innerHTML = weekDay;
+            }
+        }
+        displayDate();
+        
+        /* Fetch 5-Day forecast */
+        requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial';
+        fetch(requestUrl)
+            .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+        console.log(data);
+
+
+        /* Displays temperature for 5 days */
+        function displayTemp() {
+        dayOneTemp.innerHTML = Math.round(data.list[3].main.temp) + '&deg;';
+        var iconOneUrl = 'https://openweathermap.org/img/wn/' + data.list[3].weather[0].icon + '@2x.png';
+        dayOneIcon.setAttribute('src', iconOneUrl);
+        }
+        displayTemp();
+       
+        /* Displays weather details for 5 days */
+        function displayWeather() {
+        dayOneWeather.innerHTML = data.list[3].weather[0].description + '<br/>wind: ' + data.list[3].wind.speed + ' mph' + '<br/>humidity: ' + data.list[3].main.humidity + '%';
+        }
+        displayWeather();
+    });
         
     }
 document.onload = getLocation();
@@ -67,5 +113,6 @@ function displayDate() {
     yourDate.innerHTML = todaysDate;
 }
 document.onload = displayDate();
+
 
 

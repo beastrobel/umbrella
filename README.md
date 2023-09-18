@@ -6,10 +6,11 @@ The challenge was to design and develop a weather dashboard web application powe
 ## Usage
 The website’s URL is https://beastrobel.github.io/umbrella. Screenshots can be viewed below. In order to use the Umbrella app, allow location access to view local weather, or use the search bar to look up weather by city. The repository for this project can be found at https://github.com/beastrobel/umbrella.
 
-![Screenshot (17)](https://github.com/beastrobel/umbrella/assets/137853377/1a6a14c5-5e46-4c9a-b7fc-9c71ffd34240)
-![Screenshot (20)](https://github.com/beastrobel/umbrella/assets/137853377/bcd167c8-ac43-49bb-992c-01703139774d)
-![Screenshot (18)](https://github.com/beastrobel/umbrella/assets/137853377/1dbaad75-3525-499c-9ee6-99ffe4a2f880)
-![Screenshot (22)](https://github.com/beastrobel/umbrella/assets/137853377/8567e778-614d-4473-b16a-5588eb700df0)
+![Screenshot (32)](https://github.com/beastrobel/umbrella/assets/137853377/2df5dc6e-0055-4012-a393-0e79356ac23e)
+![Screenshot (33)](https://github.com/beastrobel/umbrella/assets/137853377/fe0be67f-7d71-442e-b2a8-96b1b46c4208)
+![Screenshot (31)](https://github.com/beastrobel/umbrella/assets/137853377/ef5f7dec-f061-4c5c-a36a-5802f583211b)
+![Screenshot (29)](https://github.com/beastrobel/umbrella/assets/137853377/b9125c95-fe7f-4fbf-8765-a830e4926b93)
+
 
 
 ## Credits

@@ -91,22 +91,31 @@ function showPosition(position) {
     }
     getLocation();
 
-/* Search button */
-/* Work-around to keep getLocation from running on page reload? Modified from Stack Overflow: https://stackoverflow.com/questions/49515750/button-clicked-true-or-false-javascript */
-function clickBtn() {
-var textInput = document.getElementById("searchBar").value;
-    localStorage.setItem('Saved Location', textInput);
-     console.log(textInput);
-     return false;
-};
-
-function favLocations () {
+    /* Search button */
+    var form = $('#location-search');
+    var locationInput = $('#searchBar');
+    var locationList = $('#favLocation');
     
-}
+    var printLocations = function (name) {
+      var listEl = $('<li>');
+      var listDetail = name;
+      listEl.addClass('list-group-item').text(listDetail);
+      listEl.appendTo(locationList);
+    };
+    
+    var handleFormSubmit = function (event) {
+      event.preventDefault();
+      var location = locationInput.val();
+      printLocations(location);
+      /*Add to local storage */
+      localStorage.setItem('location', location);
+      locationInput.val('');
+    };
+    
+    form.on('submit', handleFormSubmit);
 
 function displayDate() {
     var yourDate = document.getElementById("yourDate");
-    
     yourDate.innerHTML = todaysDate;
 }
 displayDate();

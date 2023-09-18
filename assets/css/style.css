@@ -129,6 +129,15 @@ header {
     padding-bottom: 50px;
 }
 
+/* Favorite Locations Section */
+a {
+    text-decoration: none;
+}
+
+#favorite-locations{
+    padding-bottom: 50px;
+}
+
 /* About Section */
 #about {
     background-color: var(--dark);

@@ -16,8 +16,7 @@ function getLocation() {
 
 function showPosition(position) {
     var lat = position.coords.latitude;
-    var lon = position.coords.longitude;
-    "<br>Longitude: " + lon;
+    var lon = position.coords.longitude; "<br>Longitude: " + lon;
         
         /* Fetch daily forecast */
         var requestUrl = 'https://api.openweathermap.org/data/2.5/weather?q&lat=' + lat + '&lon=' + lon + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial';
@@ -61,24 +60,7 @@ function showPosition(position) {
                 }
                 displayWeather();
         });
-
-        
-
-        var dayOneTemp = document.getElementById("day-1-temp");
-        var dayOneIcon = document.getElementById("day-1-icon");
-        var dayOneWeather = document.getElementById("day-1-weather");
-
-        /* Displays dates for 5-Day forecast */
-        function displayDate() {
-            for (let i=0; i<5; i++){
-            let x = dayjs();
-            let weekDay = x.add(i+1, 'day').format('dddd');
-            var weekDayLabel = document.getElementById("day-"+(i+1));
-            weekDayLabel.innerHTML = weekDay;
-            }
-        }
-        displayDate();
-        
+ 
         /* Fetch 5-Day forecast */
         requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=0282671f74388449f4d4c1e0b2dbe75e&units=imperial';
         fetch(requestUrl)
@@ -88,21 +70,22 @@ function showPosition(position) {
         .then(function (data) {
         console.log(data);
 
-
-        /* Displays temperature for 5 days */
-        function displayTemp() {
-        dayOneTemp.innerHTML = Math.round(data.list[3].main.temp) + '&deg;';
-        var iconOneUrl = 'https://openweathermap.org/img/wn/' + data.list[3].weather[0].icon + '@2x.png';
-        dayOneIcon.setAttribute('src', iconOneUrl);
-        }
-        displayTemp();
-       
-        /* Displays weather details for 5 days */
-        function displayWeather() {
-        dayOneWeather.innerHTML = data.list[3].weather[0].description + '<br/>wind: ' + data.list[3].wind.speed + ' mph' + '<br/>humidity: ' + data.list[3].main.humidity + '%';
-        }
-        displayWeather();
-    });
+             /* Displays data for 5-Day forecast */
+            function displayFiveDays() {
+            for (let i=0; i<5; i++){
+                let x = dayjs();
+                let weekDay = x.add(i+1, 'day').format('dddd');
+                var weekDayLabel = document.getElementById("day-"+(i+1));
+                weekDayLabel.children[0].innerHTML = weekDay;
+                let weekIcon = 'https://openweathermap.org/img/wn/' + data.list[i*8+3].weather[0].icon + '@2x.png';
+                weekDayLabel.children[1].setAttribute('src', weekIcon);
+                weekDayLabel.children[2].innerHTML = Math.round(data.list[i*8+3].main.temp) + '&deg;'; 
+                weekDayLabel.children[3].innerHTML = data.list[i*8+3].weather[0].description + '<br/>wind: ' + data.list[i*8+3].wind.speed + ' mph' + '<br/>humidity: ' + data.list[i*8+3].main.humidity + '%';  
+                
+                }
+            }
+            displayFiveDays();
+        });
         
     }
 document.onload = getLocation();

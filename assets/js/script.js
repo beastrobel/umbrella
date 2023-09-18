@@ -4,9 +4,10 @@ var localWeather = document.getElementById("yourWeather");
 var localTemp = document.getElementById("yourTemp");
 var needUmbrella = document.getElementById("umbrella");
 var weatherIcon = document.getElementById("weatherIcon"); 
+var searchButton = document.getElementById("searchButton");
 
 /* Geolocation instructions from W3 Schools, modified for this project */
-function getLocation() {
+function getLocation() { 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
   } else {
@@ -88,14 +89,26 @@ function showPosition(position) {
         });
         
     }
-document.onload = getLocation();
+    getLocation();
+
+/* Search button */
+/* Work-around to keep getLocation from running on page reload? Modified from Stack Overflow: https://stackoverflow.com/questions/49515750/button-clicked-true-or-false-javascript */
+function clickBtn() {
+var textInput = document.getElementById("searchBar").value;
+    localStorage.setItem('Saved Location', textInput);
+     console.log(textInput);
+     return false;
+};
+
+function favLocations () {
+    
+}
 
 function displayDate() {
     var yourDate = document.getElementById("yourDate");
     
     yourDate.innerHTML = todaysDate;
 }
-document.onload = displayDate();
-
+displayDate();
 
 

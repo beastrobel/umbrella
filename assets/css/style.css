@@ -78,6 +78,10 @@ header {
     border-width: 3px;
 }
 
+#searchLink {
+    text-decoration:none;
+}
+
 /* Daily Forecast Card */
 .card {
     border: none;

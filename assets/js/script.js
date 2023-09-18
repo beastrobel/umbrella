@@ -90,9 +90,9 @@ function showPosition(position) {
     var locationList = $('#favLocation');
     
     var printLocations = function (name) {
-      var listEl = $('<li>');
+      var listEl = $('<a>');
       var listDetail = name;
-      listEl.addClass('list-group-item').text(listDetail);
+      listEl.addClass('list-group-item list-group-item-action').text(listDetail);
       listEl.appendTo(locationList);
     };
     

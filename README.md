@@ -9,9 +9,6 @@ The website’s URL is https://beastrobel.github.io/umbrella. Screenshots can be
 ![Screenshot (32)](https://github.com/beastrobel/umbrella/assets/137853377/2df5dc6e-0055-4012-a393-0e79356ac23e)
 ![Screenshot (33)](https://github.com/beastrobel/umbrella/assets/137853377/fe0be67f-7d71-442e-b2a8-96b1b46c4208)
 ![Screenshot (31)](https://github.com/beastrobel/umbrella/assets/137853377/ef5f7dec-f061-4c5c-a36a-5802f583211b)
-![Screenshot (29)](https://github.com/beastrobel/umbrella/assets/137853377/b9125c95-fe7f-4fbf-8765-a830e4926b93)
-
-
 
 ## Credits
 I am responsible for the entirety of this project, from the design to the development (HTML, CSS, and JavaScript).

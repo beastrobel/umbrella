@@ -27,13 +27,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Daily Forecast<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#daily-forecast">Daily Forecast<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">5-Day Forecast</a>
+              <a class="nav-link" href="#five-day-forecast">5-Day Forecast</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
           </ul>
         </div>
@@ -84,33 +84,33 @@
             <h4>5-DAY FORECAST</h4>
             <div class="row justify-content-between">  
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-1">
-                    <p class="card-text text-left"></p>
+                    <p class="card-text text-left" id="weekday"></p>
                     <img src=""/>
-                    <p class="card-title text-right" id="temp-1"></p>
+                    <p class="card-title text-right" id="weekday-temp"></p>
                     <p class="card-text text-right">No Data Available</p>
                 </div>
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-2">
-                    <p class="card-text text-left"></p>
+                    <p class="card-text text-left" id="weekday"></p>
                     <img src=""/>
-                    <p class="card-title text-right" id="temp-2"></p>
+                    <p class="card-title text-right" id="weekday-temp"></p>
                     <p class="card-text text-right">No Data Available</p>
                 </div>
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-3">
-                    <p class="card-text text-left"></p>
+                    <p class="card-text text-left" id="weekday"></p>
                     <img src=""/>
-                    <p class="card-title text-right" id="temp-3"></p>
+                    <p class="card-title text-right" id="weekday-temp"></p>
                     <p class="card-text text-right">No Data Available</p>
                 </div>
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-4">
-                    <p class="card-text text-left"></p>
+                    <p class="card-text text-left" id="weekday"></p>
                     <img src=""/>
-                    <p class="card-title text-right" id="temp-4"></p>
+                    <p class="card-title text-right" id="weekday-temp"></p>
                     <p class="card-text text-right">No Data Available</p>
                 </div>
                 <div class="card col-sm-12 col-md-12 col-lg-2" id="day-5">
-                    <p class="card-text text-left"></p>
+                    <p class="card-text text-left" id="weekday"></p>
                     <img src=""/>
-                    <p class="card-title text-right" id="temp-5"></p>
+                    <p class="card-title text-right" id="weekday-temp"></p>
                     <p class="card-text text-right">No Data Available</p>
                 </div>
         </div>
@@ -120,7 +120,9 @@
 
     <section id="about">
     <div class="container">
-        <h5 class="text-center">About</h5> 
+        <h3 class="text-center">Playful design and powerful code.</h3> 
+        <br/>
+        <p class="mx-5">Umbrella Weather is a fun weather app powered by OpenWeatherMap APIs. It uses geocoding to display the user's local weather conditions, as well as a five day forecast. Umbrella Weather saves the user's favorite locations and sends gentle reminders to pack an umbrella when it's raining.</p>
     </div>   
     </section>
 
